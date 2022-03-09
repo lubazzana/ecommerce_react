@@ -1,0 +1,58 @@
+.itemBook {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    /* align-items: center; */
+    box-shadow: 0 4px 8px 0 rgba(68, 70, 70, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    width: 20rem;
+    margin-right: 2rem;
+}
+
+.imageItem {
+    width: 150px;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.info {
+    margin: 1rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.titleItem {
+    color: #007faa;
+}
+
+.authorItem {
+    color: #6d7f85;
+    margin-bottom: 2rem;
+}
+
+.infoItem {
+    color: #6d7f85;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+.priceItem {
+    margin-top: 1rem;
+    font-weight: 700;
+    color: #007faa;
+}
+
+.buttonItem {
+    background-color: white;
+    border: #007faa solid 2px;
+    border-radius: 4px;
+    color: #007faa;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1.2rem;
+    width: 224px;
+    height: 35px;
+    margin-top: 2rem;
+}

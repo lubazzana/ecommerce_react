@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import './itemCount.css'
+import './itemcount.css'
 
 const ItemCount = (props) => {
     const [counter, setCounter] = useState(1)
@@ -26,7 +26,7 @@ const ItemCount = (props) => {
         <div className='countContainer'>
             <div className='counter'>
                 <button type="button" onClick={decrease} className='buttonDecrease'>-</button>
-                <input type="text" value={counter} className='valueInput'/>
+                <div className='valueInput'><p>{counter}</p></div>
                 <button type="button" onClick={increase} className='buttonIncrease'>+</button>
             </div>
             <div className='addToCart'>
