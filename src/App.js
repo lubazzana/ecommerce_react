@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar'
 import ItemListContainer from './components/ItemListContainer'
+import ItemDetailContainer from './components/ItemDetailContainer';
 
 import './App.css';
 
@@ -8,6 +9,7 @@ function App () {
         <>
             <Navbar/>
             <ItemListContainer greeting="Bienvenid@s a Atlas!"/>
+            <ItemDetailContainer />
         </>
     )
 }
