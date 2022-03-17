@@ -6,15 +6,13 @@ const ItemDetail = ({product}) => {
     return (
         <div className='container'>
             
-            <div className='imgPortada'>
-                <img src={product.img} className='bookCover' alt='portada'/>
-            </div>
+            <img src={product[0].img} className='bookCover' alt='portada'/>
 
             <div className='details'>
-                <h2 className='bookTitle'>{product.name}</h2>
-                <h3 className='bookData'>Autor: {product.author} - Editorial: {product.editorial}</h3>
-                <p className='bookSynopsis'>{product.synopsis}</p>
-                <p className='bookPrice'>${product.price}</p>
+                <h2 className='bookTitle'>{product[0].name}</h2>
+                <h3 className='bookData'>Autor: {product[0].author} - Editorial: {product[0].editorial}</h3>
+                <p className='bookSynopsis'>{product[0].synopsis}</p>
+                <p className='bookPrice'>${product[0].price}</p>
                 <ItemCount/>
             </div>
 
@@ -22,4 +20,4 @@ const ItemDetail = ({product}) => {
     )
 }
 
-export default ItemDetail
+export default ItemDetail 

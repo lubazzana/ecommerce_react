@@ -21,7 +21,7 @@ a {
     font-weight: 900;
 }
 
-.item:hover {
+.cat:hover {
     text-decoration: none;
     font-weight: 700;
 }
