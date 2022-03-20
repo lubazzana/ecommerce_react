@@ -2,23 +2,23 @@ import React from 'react'
 import { useState } from 'react'
 import './itemcount.css'
 
-const ItemCount = (props) => {
-    const [counter, setCounter] = useState(1)
+const ItemCount = ({stock, initial, onAdd}) => {
+    const [counter, setCounter] = useState(initial)
 
     const increase = () => {
-        if (counter < props.stock) {
+        if (counter < stock) {
             setCounter(counter + 1)
         }
     }
 
     const decrease = () => {
-        if(counter > props.initial) {
+        if(counter > initial) {
             setCounter(counter - 1)
         }
     }
 
-    const onAdd = () => {
-        console.log("Añadir al carrito");
+    const confirm = (e) => {
+        onAdd(counter)
     }
 
 
@@ -30,7 +30,7 @@ const ItemCount = (props) => {
                 <button type="button" onClick={increase} className='buttonIncrease'>+</button>
             </div>
             <div className='addToCart'>
-                <button type="button" onClick={onAdd} className='buttonAdd'>Añadir al carrito</button>
+                <button type="button" onClick={confirm} className='buttonAdd'>Añadir al carrito</button>
             </div>
         </div>
     )

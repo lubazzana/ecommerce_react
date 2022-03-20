@@ -1,0 +1,17 @@
+.construction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+
+.imgConstruction {
+    width: 700px;
+}
+
+.titleConstruction {
+    color: #007faa;
+    font-size: 2rem;
+    font-weight: 700;
+}

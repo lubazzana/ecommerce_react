@@ -16,7 +16,8 @@ let prodLibros = [
         synopsis: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum beatae facere temporibus sapiente quae distinctio in odit voluptate qui dolorum quisquam recusandae obcaecati culpa praesentium aliquam nihil quod iure ex commodi', 
         editorial: 'Debolsillo', 
         category: 'fiction', 
-        price: 3000
+        price: 3000,
+        stock: 300
     },
 
     {
@@ -28,7 +29,8 @@ let prodLibros = [
         synopsis: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum beatae facere temporibus sapiente quae distinctio in odit voluptate qui dolorum quisquam recusandae obcaecati culpa praesentium aliquam nihil quod iure ex commodi', 
         editorial: 'Salamandra', 
         category: 'fiction', 
-        price: 2200
+        price: 2200,
+        stock: 300
     },
 
     {
@@ -40,7 +42,8 @@ let prodLibros = [
         synopsis: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum beatae facere temporibus sapiente quae distinctio in odit voluptate qui dolorum quisquam recusandae obcaecati culpa praesentium aliquam nihil quod iure ex commodi',
         editorial: 'Debolsillo', 
         category: 'new', 
-        price: 2000
+        price: 2000,
+        stock: 300
     },
 
     {
@@ -52,7 +55,8 @@ let prodLibros = [
         synopsis: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum beatae facere temporibus sapiente quae distinctio in odit voluptate qui dolorum quisquam recusandae obcaecati culpa praesentium aliquam nihil quod iure ex commodi',
         editorial: 'Planeta', 
         category: 'new', 
-        price: 4000
+        price: 4000,
+        stock: 300
     },
     {
         id: 5, 
@@ -63,7 +67,9 @@ let prodLibros = [
         synopsis: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum beatae facere temporibus sapiente quae distinctio in odit voluptate qui dolorum quisquam recusandae obcaecati culpa praesentium aliquam nihil quod iure ex commodi',
         editorial: 'Planeta', 
         category: 'essay', 
-        price: 1700}
+        price: 1700,
+        stock: 300
+    }
 ]
 
 const ItemListContainer = (props) => {
