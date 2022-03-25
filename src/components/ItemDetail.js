@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import { CartContext } from '../context/CartContext'
 import ItemCount from './ItemCount'
 import {Link} from 'react-router-dom'
 
@@ -7,6 +8,7 @@ import { toast } from 'react-toastify'
 import './itemdetail.css'
 
 const ItemDetail = ({product}) => {
+    const { addItem } = useContext(CartContext)
     const [seleccionado, setSeleccionado] = useState(false)
 
     const onAdd = (unidadSeleccionada) => {
@@ -19,9 +21,10 @@ const ItemDetail = ({product}) => {
             draggable: true,
             progress: undefined,
             });
+        
+        addItem(product, unidadSeleccionada)
 
         if (unidadSeleccionada !== undefined) {
-            console.log(unidadSeleccionada);
             setSeleccionado(unidadSeleccionada)
         }
     }

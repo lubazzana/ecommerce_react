@@ -20,9 +20,6 @@ const ItemDetailContainer = () => {
 
         productPromise
         .then((res)=>{
-            // res.forEach(element => {
-            //    element.id === parseInt(id) && console.log(element); 
-            // });
             let result = res.filter(product => {
                 return product.id === parseInt(id); 
             })
