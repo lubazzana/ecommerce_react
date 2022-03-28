@@ -1,17 +1,105 @@
-.construction {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+table {
+    text-align: left;
+    /* display: flex; */
+	border-collapse: collapse;
+	width: 1000px;
     margin: 2rem;
+    align-items: center;
+    justify-content: center;
 }
 
-.imgConstruction {
-    width: 700px;
+thead {
+    background-color: #007faa;
 }
 
-.titleConstruction {
+th {
+    padding: 1rem;
+    text-align: left;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.cartTableProd {
+    width: 60%;
+}
+
+.cartTableCant {
+    width: 20%;
+}
+
+.cartTablePrize {
+    width: 20%;
+}
+
+tbody {
+    background-color: azure;
+}
+
+td {
+    padding: 1rem;
+    text-align: left;
+    font-size: 1.2rem;
     color: #007faa;
-    font-size: 2rem;
-    font-weight: 700;
+}
+
+.deleteButton {
+    color: #007faa;
+    background: none;
+    border: none;
+    padding: 2rem;
+    font-size: 1.2rem;
+}
+
+.total {
+    background-color: #007faa;
+    width: 1000px;
+    text-align: center;
+    color: white;
+    margin: 2rem;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.buttonEmpty {
+    background-color: white;
+    border: white solid 2px;
+    border-radius: 4px;
+    color: #007faa;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1.2rem;
+    width: 224px;
+    height: 35px;
+    margin-top: 1rem;
+}
+
+.cartDiv {
+    width: 1000px;
+    text-align: center;
+    margin: 2rem;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.buttonCart {
+    background-color: #007faa;
+    border: #007faa solid 2px;
+    border-radius: 4px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1.2rem;
+    width: 224px;
+    height: 35px;
+    margin-top: 2rem;
+}
+
+.emptyCart {
+    color: #007faa;
+    font-weight: 500;
 }

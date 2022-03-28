@@ -105,8 +105,8 @@ const ItemListContainer = (props) => {
     return (
         <>
             <h1>{props.greeting}</h1>
-            <p>{loading ? 'Cargando, por favor espere...' : null}</p>
-            <h4>{error ? 'Error al cargar la página, por favor intente nuevamente' : null}</h4>
+            <p>{loading && 'Cargando, por favor espere...'}</p>
+            <h4>{error && 'Error al cargar la página, por favor intente nuevamente'}</h4>
             <ItemList products = {products}/>
         </>
     )
