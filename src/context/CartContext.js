@@ -9,12 +9,14 @@ const CartContextProvider = ({children}) => {
     const [cantidad, setCantidad] = useState(0)
 
     const addItem = (product, cant) => {
-        let cartProduct = {prod: product[0], cant}
+        let cartProduct = {prod: product, cant}
         let cartAux = []
         let newTotal = total
 
+        console.log(cartProduct)
+        
         if(isInCart(product)) {
-            cartProduct = cart.find(item => item.prod.id === product[0].id)
+            cartProduct = cart.find(item => item.prod.id === product.id)
             cartProduct.cant += cant
             cartAux = [...cart]
             newTotal += cartProduct.cant * cartProduct.prod.price
@@ -25,7 +27,6 @@ const CartContextProvider = ({children}) => {
         
         let cantidadProds = cantidad
         cantidadProds += cant
-        // console.log(cantidadProds);
 
         setCart(cartAux)
         setTotal(newTotal)
@@ -55,7 +56,7 @@ const CartContextProvider = ({children}) => {
     }
 
     const isInCart = (product) => {
-        return cart && cart.some(item => item.prod.id === product[0].id)
+        return cart && cart.some(item => item.prod.id === product.id)
     }
 
 

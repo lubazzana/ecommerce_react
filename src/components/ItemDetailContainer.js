@@ -1,43 +1,47 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import {prodLibros} from './ItemListContainer'
+import { toast } from "react-toastify";
+
+import { getDoc, doc} from 'firebase/firestore'
+import { db } from '../Firebase'
 
 import ItemDetail from './ItemDetail'
 
 const ItemDetailContainer = () => {
     const [loading, setLoading] = useState(true)
-    const [product, setProduct] = useState ([])
+    const [product, setProduct] = useState ({})
     const [error, setError] = useState(false)
     const {id} = useParams()
 
     useEffect(()=>{
-        const productPromise = new Promise((res,rej)=>{
-            setTimeout(()=>{
-                res(prodLibros)
-            }, 2000)
-        })
 
-        productPromise
-        .then((res)=>{
-            let result = res.filter(product => {
-                return product.id === parseInt(id); 
-            })
-            setProduct(result);
-        })
-        .catch((error)=>{
+        const docRef = doc(db, "products", id);
+        getDoc(docRef)
+        .then((res)=> setProduct(res.data()))
+        .catch((err => 
+            toast.error('No se encontró el producto, por favor intente nuevamente', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                }),
+            
             setError(true)
-        })
+        ))
         .finally(()=>{
             setLoading(false)
         })
+    
+    },[id])
 
-    }, [id])
 
     return (
         <div>
             {loading ? <p>Cargando, por favor espere...</p> : <ItemDetail product={product} />}
-            <h4>{error ? 'No se encontró el producto, por favor intente nuevamente' : null}</h4>
         </div>
     )
 }
