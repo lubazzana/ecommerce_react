@@ -12,8 +12,6 @@ const CartContextProvider = ({children}) => {
         let cartProduct = {prod: product, cant}
         let cartAux = []
         let newTotal = total
-
-        console.log(cartProduct)
         
         if(isInCart(product)) {
             cartProduct = cart.find(item => item.prod.id === product.id)

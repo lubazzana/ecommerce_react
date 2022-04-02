@@ -2,10 +2,36 @@ import React, { useContext} from 'react'
 import { CartContext } from '../context/CartContext'
 import { Link } from 'react-router-dom'
 import { FaTrashAlt } from 'react-icons/fa'
+import {db} from '../Firebase'
+import { addDoc, collection, serverTimestamp } from 'firebase/firestore'
 import './cart.css'
 
 const Cart = () => {
+    
     const { cart, removeItem, clear, total } = useContext(CartContext)
+    
+    const buyOrder = () => {
+        const order = {
+            buyer : {
+                name: 'Lucrecia',
+                phone: '123456789',
+                email: 'lucrecia@mail.com'
+            },
+            items: cart,
+            date: serverTimestamp(),
+            total: total
+        }
+
+        const ordersCollection = collection(db, 'orders')
+        const buy = addDoc(ordersCollection, order)
+
+        buy
+        .then(res => {
+            console.log(res.id)
+            console.log('Gracias por su compra')
+            clear()
+        })
+    }
     
     return (
         <div>
@@ -45,7 +71,7 @@ const Cart = () => {
                         
                     <div className='cartDiv'>
                         <Link to='/'> <button className='buttonCart'>Seguir comprando</button> </Link>
-                        <button className='buttonCart'>Finalizar compra</button>
+                        <button className='buttonCart' onClick={buyOrder}>Finalizar compra</button>
                     </div>
                 </>
 
