@@ -24,7 +24,7 @@ const ItemListContainer = (props) => {
             getDocs(q)
             .then((res) => setProducts(res.docs.map(prod => ({...prod.data(), id: prod.id}))))
             .catch((err => 
-                toast.error('Error al cargar la página, por favor intente nuevamente', {
+                toast.error('No se encuentran los productos, por favor intente nuevamente', {
                     position: "top-right",
                     autoClose: 5000,
                     hideProgressBar: false,
@@ -45,7 +45,7 @@ const ItemListContainer = (props) => {
             getDocs(collection(db, "products"))
             .then((res) => setProducts(res.docs.map(p => ({...p.data(), id: p.id}))))
             .catch((err => 
-                toast.error('Error al cargar la página, por favor intente nuevamente', {
+                toast.error('No se encuentran los productos, por favor intente nuevamente', {
                     position: "top-right",
                     autoClose: 5000,
                     hideProgressBar: false,
@@ -112,11 +112,9 @@ const ItemListContainer = (props) => {
                 </Carousel>
             </Container>
 
-            <div>{loading &&
-            
-                <Spinner animation="border" role="status">
-                    <span className="visually-hidden">Cargando...</span>
-                </Spinner>}
+            <div>
+                {loading && <Spinner animation="border" role="status"><span className="visually-hidden">Cargando...</span></Spinner> }
+                {error && <p>Error al cargar la página, por favor intente nuevamente</p>}
             </div>
             
             <ItemList products = {products}/>

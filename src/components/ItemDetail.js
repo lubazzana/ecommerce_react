@@ -5,8 +5,6 @@ import {Link} from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { Container, Row, Col } from 'react-bootstrap'
 
-// import './itemdetail.css'
-
 const ItemDetail = ({product}) => {
     const { addItem } = useContext(CartContext)
     const [seleccionado, setSeleccionado] = useState(false)

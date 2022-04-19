@@ -40,11 +40,8 @@ const ItemDetailContainer = () => {
 
     return (
         <div>
-            {loading ?
-                <Spinner animation="border" role="status">
-                    <span className="visually-hidden">Cargando...</span>
-                </Spinner> 
-            : <ItemDetail product={product} />}
+            {loading ? <Spinner animation="border" role="status"><span className="visually-hidden">Cargando...</span></Spinner> : <ItemDetail product={product} />}
+            {error && <p>Error al cargar la página, por favor intente nuevamente</p>}
         </div>
     )
 }

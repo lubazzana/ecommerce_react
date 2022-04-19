@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom'
 import { FaTrashAlt } from 'react-icons/fa'
 import {db} from '../Firebase'
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore'
-import {Table, Container, Button} from 'react-bootstrap'
+import {Table, Container, Button } from 'react-bootstrap'
+import { toast } from 'react-toastify'
 
 const Cart = () => {
     
@@ -27,8 +28,16 @@ const Cart = () => {
 
         buy
         .then(res => {
-            console.log(res.id)
-            console.log('Gracias por su compra')
+            toast.success('¡Muchas gracias por su compra! El código de su compra es:' + res.id, {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                });
+                
             clear()
         })
     }
