@@ -1,10 +1,12 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/eabd7a51-dc8c-4b9b-bb08-8ae242e880ce/deploy-status)](https://app.netlify.com/sites/atlas-libreria/deploys)
+
 # Project information
 
 
 ## Project description
 
 This is the final project for the Coderhouse ReactJS course. This project consists of an ecommerce website for a bookstore. It was developed using React.js together with React Router Dom, React Hooks, React Bootstrap, React Toastify for notifications and Firebase as a database.
+
 
 
 ## Frameworks and Libraries
@@ -20,6 +22,7 @@ This is the final project for the Coderhouse ReactJS course. This project consis
 * React-toastify: v8.2.0
 
 
+
 ## Installation process
 
 1. Visit the repository's home page.
@@ -30,16 +33,18 @@ This is the final project for the Coderhouse ReactJS course. This project consis
 6. Type git clone, and then paste the URL you copied earlier.
 `$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY`
 7. Hit Enter to create your local clone.
-`$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY`
-```> Cloning into `Spoon-Knife`...```
-```> remote: Counting objects: 10, done.```
-```> remote: Compressing objects: 100% (8/8), done.```
-```> remove: Total 10 (delta 1), reused 10 (delta 1)```
-```> Unpacking objects: 100% (10/10), done.```
+```$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+> Cloning into `Spoon-Knife`...
+> remote: Counting objects: 10, done.
+> remote: Compressing objects: 100% (8/8), done.
+> remove: Total 10 (delta 1), reused 10 (delta 1)
+> Unpacking objects: 100% (10/10), done.
+```
 8. Install the necessary repository dependencies. On the command line, run the following command:
 npm install
 9. Start the repository. On the command line, run the command:
 npm start
+
 
 
 ## How to use
@@ -50,9 +55,11 @@ npm start
 4. Complete the purchase by clicking the "Finalizar la compra" button. If you prefer to continue adding products, click "Seguir comprando" and continue browsing the site.
 
 
+
 ## Link to the project
 
 [Project in Netlify](https://atlas-libreria.netlify.app/)
+
 
 
 ## Project images
