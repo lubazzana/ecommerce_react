@@ -18,7 +18,7 @@ const ItemDetailContainer = () => {
         const docRef = doc(db, "products", id);
         getDoc(docRef)
         .then((res)=> setProduct(res.data()))
-        .catch((err => 
+        .catch(() => {
             toast.error('No se encontró el producto, por favor intente nuevamente', {
                 position: "top-right",
                 autoClose: 5000,
@@ -27,10 +27,10 @@ const ItemDetailContainer = () => {
                 pauseOnHover: true,
                 draggable: true,
                 progress: undefined,
-                }),
+                });
             
             setError(true)
-        ))
+        })
         .finally(()=>{
             setLoading(false)
         })

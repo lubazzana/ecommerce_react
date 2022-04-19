@@ -44,7 +44,7 @@ const ItemListContainer = (props) => {
         else {
             getDocs(collection(db, "products"))
             .then((res) => setProducts(res.docs.map(p => ({...p.data(), id: p.id}))))
-            .catch((err => 
+            .catch(() => {
                 toast.error('No se encuentran los productos, por favor intente nuevamente', {
                     position: "top-right",
                     autoClose: 5000,
@@ -53,10 +53,10 @@ const ItemListContainer = (props) => {
                     pauseOnHover: true,
                     draggable: true,
                     progress: undefined,
-                    }),
+                    });
                 
                 setError(true)
-            ))
+            })
             .finally(()=>{
                 setLoading(false)
             })
@@ -114,7 +114,7 @@ const ItemListContainer = (props) => {
 
             <div>
                 {loading && <Spinner animation="border" role="status"><span className="visually-hidden">Cargando...</span></Spinner> }
-                {error && <p>Error al cargar la página, por favor intente nuevamente</p>}
+                {error && null}
             </div>
             
             <ItemList products = {products}/>
