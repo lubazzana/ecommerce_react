@@ -2,12 +2,12 @@
 # Project information
 
 
-### Project description
+## Project description
 
 This is the final project for the Coderhouse ReactJS course. This project consists of an ecommerce website for a bookstore. It was developed using React.js together with React Router Dom, React Hooks, React Bootstrap, React Toastify for notifications and Firebase as a database.
 
 
-### Frameworks and Libraries
+## Frameworks and Libraries
 
 * Bootstrap: v5.1.3
 * React-bootstraop: v2.2.0
@@ -20,7 +20,7 @@ This is the final project for the Coderhouse ReactJS course. This project consis
 * React-toastify: v8.2.0
 
 
-### Installation process
+## Installation process
 
 1. Visit the repository's home page.
 2. Above the list of files, click "Code" button.
@@ -28,40 +28,43 @@ This is the final project for the Coderhouse ReactJS course. This project consis
 4. Open Git Bash.
 5. Change the current working directory to the location where you want to clone the directory.
 6. Type git clone, and then paste the URL you copied earlier.
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+`$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY`
 7. Hit Enter to create your local clone.
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-> Cloning into `Spoon-Knife`...
-> remote: Counting objects: 10, done.
-> remote: Compressing objects: 100% (8/8), done.
-> remove: Total 10 (delta 1), reused 10 (delta 1)
-> Unpacking objects: 100% (10/10), done.
+`$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY`
+```> Cloning into `Spoon-Knife`...```
+```> remote: Counting objects: 10, done.```
+```> remote: Compressing objects: 100% (8/8), done.```
+```> remove: Total 10 (delta 1), reused 10 (delta 1)```
+```> Unpacking objects: 100% (10/10), done.```
 8. Install the necessary repository dependencies. On the command line, run the following command:
 npm install
 9. Start the repository. On the command line, run the command:
 npm start
 
-### How to use
+
+## How to use
 
 1. Browse the store. You can select the products from the home or you can go to the different categories that are found in the navigation bar.
 2. Find out the product details, select the quantity you want to buy and add them to the cart.
 3. Go to the cart to check the selected items.
 4. Complete the purchase by clicking the "Finalizar la compra" button. If you prefer to continue adding products, click "Seguir comprando" and continue browsing the site.
 
-### Project images
 
-![image](https://github.com/lubazzana/ecommerce_react/blob/main/public/project/Atlas%20Librer%C3%ADa%20-%20Google%20Chrome%2019_4_2022%2020_30_15.png)
-![image](https://github.com/lubazzana/ecommerce_react/blob/main/public/project/Atlas%20Librer%C3%ADa%20-%20Google%20Chrome%2019_4_2022%2020_30_46.png)
-![image](https://github.com/lubazzana/ecommerce_react/blob/main/public/project/Atlas%20Librer%C3%ADa%20-%20Google%20Chrome%2019_4_2022%2020_30_54.png)
-![image](https://github.com/lubazzana/ecommerce_react/blob/main/public/project/Atlas%20Librer%C3%ADa%20-%20Google%20Chrome%2019_4_2022%2020_31_05.png)
-![image](https://github.com/lubazzana/ecommerce_react/blob/main/public/project/Atlas%20Librer%C3%ADa%20-%20Google%20Chrome%2019_4_2022%2020_31_14.png)
-![image](https://github.com/lubazzana/ecommerce_react/blob/main/public/project/Atlas%20Librer%C3%ADa%20-%20Google%20Chrome%2019_4_2022%2020_31_24.png)
-![image](https://github.com/lubazzana/ecommerce_react/blob/main/public/project/Atlas%20Librer%C3%ADa%20-%20Google%20Chrome%2019_4_2022%2020_31_33.png)
-![image](https://github.com/lubazzana/ecommerce_react/blob/main/public/project/Atlas%20Librer%C3%ADa%20-%20Google%20Chrome%2019_4_2022%2020_31_40.png)
-![image](https://github.com/lubazzana/ecommerce_react/blob/main/public/project/Atlas%20Librer%C3%ADa%20-%20Google%20Chrome%2019_4_2022%2020_31_53.png)
-![image](https://github.com/lubazzana/ecommerce_react/blob/main/public/project/Atlas%20Librer%C3%ADa%20-%20Google%20Chrome%2019_4_2022%2020_32_02.png)
-![image](https://github.com/lubazzana/ecommerce_react/blob/main/public/project/Atlas%20Librer%C3%ADa%20-%20Google%20Chrome%2019_4_2022%2020_32_14.png)
-
-### Deployment
+## Link to the project
 
 [Project in Netlify](https://atlas-libreria.netlify.app/)
+
+
+## Project images
+
+![image](https://github.com/lubazzana/ecommerce_react/blob/main/public/project/Atlas%20Librer%C3%ADa%20-%20Google%20Chrome%2019_4_2022%2020_30_15.png)
+
+![image](https://github.com/lubazzana/ecommerce_react/blob/main/public/project/Atlas%20Librer%C3%ADa%20-%20Google%20Chrome%2019_4_2022%2020_30_46.png)
+
+![image](https://github.com/lubazzana/ecommerce_react/blob/main/public/project/Atlas%20Librer%C3%ADa%20-%20Google%20Chrome%2019_4_2022%2020_31_05.png)
+
+![image](https://github.com/lubazzana/ecommerce_react/blob/main/public/project/Atlas%20Librer%C3%ADa%20-%20Google%20Chrome%2019_4_2022%2020_31_14.png)
+
+![image](https://github.com/lubazzana/ecommerce_react/blob/main/public/project/Atlas%20Librer%C3%ADa%20-%20Google%20Chrome%2019_4_2022%2020_31_53.png)
+
+![image](https://github.com/lubazzana/ecommerce_react/blob/main/public/project/Atlas%20Librer%C3%ADa%20-%20Google%20Chrome%2019_4_2022%2020_32_14.png)
