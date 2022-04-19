@@ -50,3 +50,18 @@ npm start
 
 ### Project images
 
+![image](https://github.com/lubazzana/ecommerce_react/blob/main/public/project/Atlas%20Librer%C3%ADa%20-%20Google%20Chrome%2019_4_2022%2020_30_15.png)
+![image](https://github.com/lubazzana/ecommerce_react/blob/main/public/project/Atlas%20Librer%C3%ADa%20-%20Google%20Chrome%2019_4_2022%2020_30_46.png)
+![image](https://github.com/lubazzana/ecommerce_react/blob/main/public/project/Atlas%20Librer%C3%ADa%20-%20Google%20Chrome%2019_4_2022%2020_30_54.png)
+![image](https://github.com/lubazzana/ecommerce_react/blob/main/public/project/Atlas%20Librer%C3%ADa%20-%20Google%20Chrome%2019_4_2022%2020_31_05.png)
+![image](https://github.com/lubazzana/ecommerce_react/blob/main/public/project/Atlas%20Librer%C3%ADa%20-%20Google%20Chrome%2019_4_2022%2020_31_14.png)
+![image](https://github.com/lubazzana/ecommerce_react/blob/main/public/project/Atlas%20Librer%C3%ADa%20-%20Google%20Chrome%2019_4_2022%2020_31_24.png)
+![image](https://github.com/lubazzana/ecommerce_react/blob/main/public/project/Atlas%20Librer%C3%ADa%20-%20Google%20Chrome%2019_4_2022%2020_31_33.png)
+![image](https://github.com/lubazzana/ecommerce_react/blob/main/public/project/Atlas%20Librer%C3%ADa%20-%20Google%20Chrome%2019_4_2022%2020_31_40.png)
+![image](https://github.com/lubazzana/ecommerce_react/blob/main/public/project/Atlas%20Librer%C3%ADa%20-%20Google%20Chrome%2019_4_2022%2020_31_53.png)
+![image](https://github.com/lubazzana/ecommerce_react/blob/main/public/project/Atlas%20Librer%C3%ADa%20-%20Google%20Chrome%2019_4_2022%2020_32_02.png)
+![image](https://github.com/lubazzana/ecommerce_react/blob/main/public/project/Atlas%20Librer%C3%ADa%20-%20Google%20Chrome%2019_4_2022%2020_32_14.png)
+
+### Deployment
+
+[Project in Netlify](https://atlas-libreria.netlify.app/)
