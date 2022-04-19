@@ -5,7 +5,6 @@ import { FaTrashAlt } from 'react-icons/fa'
 import {db} from '../Firebase'
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore'
 import {Table, Container, Button} from 'react-bootstrap'
-// import './cart.css'
 
 const Cart = () => {
     
@@ -40,6 +39,7 @@ const Cart = () => {
             {cart.length > 0 ?
                 <>
                 <Container>
+
                     <Table bordered responsive>
                         <thead>
                             <tr>

@@ -6,6 +6,7 @@ import { toast } from "react-toastify";
 import { Container, Carousel } from 'react-bootstrap';
 import { getDocs, query, collection, where } from 'firebase/firestore'
 import { db } from '../Firebase'
+import Spinner from 'react-bootstrap/Spinner'
 
 
 const ItemListContainer = (props) => {
@@ -65,46 +66,59 @@ const ItemListContainer = (props) => {
     return (
         <>
             <Container>
-                <Carousel>
+                <Carousel id="slider">
                     <Carousel.Item>
                         <img
                         className="d-block w-100"
-                        src="holder.js/800x400?text=First slide&bg=373940"
+                        src="https://tap-multimedia-1113.nyc3.digitaloceanspaces.com/slider/3898/large/roma_soy_yo.jpg"
                         alt="First slide"
                         />
-                        <Carousel.Caption>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                        </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
                         className="d-block w-100"
-                        src="holder.js/800x400?text=Second slide&bg=282c34"
+                        src="https://tap-multimedia-1113.nyc3.digitaloceanspaces.com/slider/3932/large/bonelli_hechizo_de_amor.jpg"
                         alt="Second slide"
                         />
-
-                        <Carousel.Caption>
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
                         className="d-block w-100"
-                        src="holder.js/800x400?text=Third slide&bg=20232a"
+                        src="https://tap-multimedia-1113.nyc3.digitaloceanspaces.com/slider/3928/large/banner_alguien_a_alguien_contarle_todo.jpg"
                         alt="Third slide"
                         />
-
-                        <Carousel.Caption>
-                        <h3>Third slide label</h3>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                        className="d-block w-100"
+                        src="https://tap-multimedia-1113.nyc3.digitaloceanspaces.com/slider/3937/large/Banner_Cuspide_Calles_1200x300.jpg"
+                        alt="Third slide"
+                        />
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                        className="d-block w-100"
+                        src="https://tap-multimedia-1113.nyc3.digitaloceanspaces.com/slider/3905/large/Diario_de_Pilar_en_India_Cuspide_01.png"
+                        alt="Third slide"
+                        />
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                        className="d-block w-100"
+                        src="https://tap-multimedia-1113.nyc3.digitaloceanspaces.com/slider/3968/large/202203_Gallant_Cuspide_01.png"
+                        alt="Third slide"
+                        />
                     </Carousel.Item>
                 </Carousel>
             </Container>
 
-            <p>{loading && 'Cargando, por favor espere...'}</p>
+            <div>{loading &&
+            
+                <Spinner animation="border" role="status">
+                    <span className="visually-hidden">Cargando...</span>
+                </Spinner>}
+            </div>
+            
             <ItemList products = {products}/>
         </>
     )

@@ -12,7 +12,7 @@ function App () {
     return (
         <CartContextProvider>
             <BrowserRouter>
-                {/* <Header/> */}
+                <Header/>
                 <Main/>
                 <Footer/>
                 

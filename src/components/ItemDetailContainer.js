@@ -2,10 +2,9 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { toast } from "react-toastify";
-
 import { getDoc, doc} from 'firebase/firestore'
 import { db } from '../Firebase'
-
+import Spinner from 'react-bootstrap/Spinner';
 import ItemDetail from './ItemDetail'
 
 const ItemDetailContainer = () => {
@@ -41,7 +40,11 @@ const ItemDetailContainer = () => {
 
     return (
         <div>
-            {loading ? <p>Cargando, por favor espere...</p> : <ItemDetail product={product} />}
+            {loading ?
+                <Spinner animation="border" role="status">
+                    <span className="visually-hidden">Cargando...</span>
+                </Spinner> 
+            : <ItemDetail product={product} />}
         </div>
     )
 }
