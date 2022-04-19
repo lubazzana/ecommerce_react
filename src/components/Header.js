@@ -32,6 +32,10 @@ const Header = () => {
                         <Col>
                             <Nav id="items" className="me-auto">
                                 <Nav.Item id="item">
+                                    <Nav.Link as={NavLink} to={'/'}>Libros</Nav.Link>
+                                </Nav.Item>
+
+                                <Nav.Item id="item">
                                     <Nav.Link as={NavLink} to={'/category/recommended'}>Recomendados</Nav.Link>
                                 </Nav.Item>
 

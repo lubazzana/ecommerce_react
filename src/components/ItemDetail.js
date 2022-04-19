@@ -33,22 +33,22 @@ const ItemDetail = ({product}) => {
         <div>
             <Container id="detail">
                 <Row>
-                    <Col md>
+                    <Col md={4}>
                         <img src={product.img} id='bookCover' alt='portada'/>
                     </Col>
-                    <Col md>
+                    <Col md={8}>
                         <Row>
                             <h2 id='bookTitle'>{product.name}</h2>
                         </Row>
                         <Row>
-                            <h3 className='bookData'>Autor: {product.author} - Editorial: {product.editorial}</h3>
+                            <h3 id='bookData'>Autor: {product.author} - Editorial: {product.editorial}</h3>
                         </Row>
                         <Row>
-                            <p className='bookSynopsis'>{product.synopsis}</p>
+                            <p id='bookSynopsis'>{product.synopsis}</p>
                         </Row>
                         <Row>
                             <div>
-                                <p className='bookPrice'>${product.price}</p>
+                                <p id='bookPrice'>Precio: ${product.price}</p>
                                 {seleccionado ? <Link to={'/cart'}><button id='button'>Ir al carrito</button></Link> : <ItemCount initial={1} stock={product.stock} onAdd={onAdd}/>}
                             </div>
                         </Row>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import './itemCount.css'
+import Row from 'react-bootstrap/Row'
 
 const ItemCount = ({stock, initial, onAdd}) => {
     const [counter, setCounter] = useState(initial)
@@ -23,15 +23,15 @@ const ItemCount = ({stock, initial, onAdd}) => {
 
 
     return (
-        <div className='countContainer'>
-            <div className='counter'>
-                <button type="button" onClick={decrease} className='buttonDecrease'>-</button>
-                <div className='valueInput'><p>{counter}</p></div>
-                <button type="button" onClick={increase} className='buttonIncrease'>+</button>
-            </div>
-            <div className='addToCart'>
+        <div id="counter">
+            <Row>
+                <button type="button" onClick={decrease} id='smallButton'>-</button>
+                <div id='valueCounter'><p>{counter}</p></div>
+                <button type="button" onClick={increase} id='smallButton'>+</button>
+            </Row>
+            <Row>
                 <button type="button" onClick={confirm} id='button'>Añadir al carrito</button>
-            </div>
+            </Row>
         </div>
     )
 }

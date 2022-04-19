@@ -35,10 +35,10 @@ const Cart = () => {
     
     return (
         <div>
-            <h1>Tu carrito</h1>
+            <h1 id='cartTitle'>Tu carrito</h1>
             {cart.length > 0 ?
                 <>
-                <Container>
+                <Container id="cart">
 
                     <Table bordered responsive>
                         <thead>
@@ -60,7 +60,7 @@ const Cart = () => {
                                             $ {item.prod.price * item.cant}
                                         </td>
                                         <td>
-                                            <Button className='deleteButton' onClick={()=> removeItem(item.prod.id)}><FaTrashAlt /></Button>
+                                            <Button id='deleteButton' onClick={()=> removeItem(item.prod.id)}><FaTrashAlt /></Button>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -69,16 +69,15 @@ const Cart = () => {
 
                         <tfoot>
                             <tr>
-                                <td></td>
-                                <td>Total: ${total}</td>
-                                <td><Button variant="primary" className='buttonEmpty'onClick={clear}>Vaciar carrito</Button></td>
+                                <td colSpan={3} id="totalPrice">Total: ${total}</td>
+                                <td colSpan={1}><Button variant="primary" id='button'onClick={clear}>Vaciar carrito</Button></td>
                             </tr>
-                            <tr>
+                            <tr id='finalButtons'>
                                 <Link as={Link} to='/'>
-                                    <Button className='buttonCart'>Seguir comprando</Button>
+                                    <Button id="button">Seguir comprando</Button>
                                 </Link>
                                 
-                                <Button className='buttonCart' onClick={buyOrder}>Finalizar compra</Button>
+                                <Button id="button" onClick={buyOrder}>Finalizar compra</Button>
                             </tr>
                         </tfoot>
                             
@@ -91,10 +90,10 @@ const Cart = () => {
 
                 :
 
-                    <div className='cartDiv'>
+                    <div id="cart">
                         <h3 className='emptyCart'>No hay productos en tu carrito</h3>
                         <Link to='/'>
-                            <button className='buttonCart'>Volver</button>
+                            <button id='button'>Volver</button>
                         </Link>
                     </div>
 

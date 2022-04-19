@@ -4,8 +4,8 @@ import { AiFillFacebook, AiFillInstagram, AiFillTwitterSquare } from 'react-icon
 
 const Footer = () => {
     return (
-        <div>
-            <Container fluid fixed="bottom">
+        <div id="footer">
+            <Container fluid>
                 <Row>
                     <Col md>
                         <img
@@ -13,25 +13,26 @@ const Footer = () => {
                             height="70"
                             className="d-inline-block align-top"
                             alt="React Bootstrap logo"
+                            id="footerLogo"
                         />
                     </Col>
 
                     <Col md>
-                        <h5>Medios de pago</h5>
+                        <h5 id="sectionTitle">Medios de pago</h5>
                         <ListGroup horizontal>
-                            <ListGroup.Item><FaCcVisa/></ListGroup.Item>
-                            <ListGroup.Item><FaCcMastercard/></ListGroup.Item>
-                            <ListGroup.Item><FaCcAmex/></ListGroup.Item>
-                            <ListGroup.Item><FaCcPaypal/></ListGroup.Item>
+                            <ListGroup.Item id="list"><FaCcVisa/></ListGroup.Item>
+                            <ListGroup.Item id="list"><FaCcMastercard/></ListGroup.Item>
+                            <ListGroup.Item id="list"><FaCcAmex/></ListGroup.Item>
+                            <ListGroup.Item id="list"><FaCcPaypal/></ListGroup.Item>
                         </ListGroup>
                     </Col>
 
                     <Col md>
-                        <h5>Nuestras redes</h5>
+                        <h5 id="sectionTitle">Nuestras redes</h5>
                         <ListGroup horizontal>
-                            <ListGroup.Item><AiFillFacebook/></ListGroup.Item>
-                            <ListGroup.Item><AiFillInstagram/></ListGroup.Item>
-                            <ListGroup.Item><AiFillTwitterSquare/></ListGroup.Item>
+                            <ListGroup.Item id="list"><AiFillFacebook/></ListGroup.Item>
+                            <ListGroup.Item id="list"><AiFillInstagram/></ListGroup.Item>
+                            <ListGroup.Item id="list"><AiFillTwitterSquare/></ListGroup.Item>
                         </ListGroup>
                     </Col>
                 </Row>
