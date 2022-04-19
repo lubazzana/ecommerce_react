@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom'
 import { FaTrashAlt } from 'react-icons/fa'
 import {db} from '../Firebase'
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore'
-import './cart.css'
+import {Table, Container, Button} from 'react-bootstrap'
+// import './cart.css'
 
 const Cart = () => {
     
@@ -37,14 +38,15 @@ const Cart = () => {
         <div>
             <h1>Tu carrito</h1>
             {cart.length > 0 ?
-                
                 <>
-                    <table>
-                        <thead className='tableHead'>
+                <Container>
+                    <Table bordered responsive>
+                        <thead>
                             <tr>
-                                <th className='cartTableProd'>Producto</th>
-                                <th className='cartTableCant'>Cantidad</th>
-                                <th className='cartTablePrize'>Precio</th>
+                                <th>Producto</th>
+                                <th>Cantidad</th>
+                                <th>Precio</th>
+                                <th>Eliminar</th>
                             </tr>
                         </thead>
 
@@ -56,23 +58,35 @@ const Cart = () => {
                                         <td className='cartTableCant'>{item.cant} Unid.</td>
                                         <td className='cartTablePrize'>
                                             $ {item.prod.price * item.cant}
-                                            <button className='deleteButton' onClick={()=> removeItem(item.prod.id)}><FaTrashAlt /></button>
+                                        </td>
+                                        <td>
+                                            <Button className='deleteButton' onClick={()=> removeItem(item.prod.id)}><FaTrashAlt /></Button>
                                         </td>
                                     </tr>
                                 </tbody>
                             )
                         })}
-                    </table>
+
+                        <tfoot>
+                            <tr>
+                                <td></td>
+                                <td>Total: ${total}</td>
+                                <td><Button variant="primary" className='buttonEmpty'onClick={clear}>Vaciar carrito</Button></td>
+                            </tr>
+                            <tr>
+                                <Link as={Link} to='/'>
+                                    <Button className='buttonCart'>Seguir comprando</Button>
+                                </Link>
+                                
+                                <Button className='buttonCart' onClick={buyOrder}>Finalizar compra</Button>
+                            </tr>
+                        </tfoot>
+                            
+
+                    </Table>
+                </Container>
+                    
                         
-                    <div className='total'>
-                        <h3>Total: $ {total}</h3>
-                        <button className='buttonEmpty'onClick={clear}>Vaciar carrito</button>
-                    </div>
-                        
-                    <div className='cartDiv'>
-                        <Link to='/'> <button className='buttonCart'>Seguir comprando</button> </Link>
-                        <button className='buttonCart' onClick={buyOrder}>Finalizar compra</button>
-                    </div>
                 </>
 
                 :

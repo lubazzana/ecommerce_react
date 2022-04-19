@@ -1,15 +1,16 @@
 import React from 'react'
 import Item from './Item'
-
-import './itemlist.css'
+import { Container } from 'react-bootstrap'
 
 const ItemList = ({products}) => {
     return (
-        <ul className='list'>
-            {products.map((product) => {
-                return <Item  key={product.id} product = {product} />
-                })}
-        </ul>
+        <>
+            <Container className='list'>
+                {products.map((product) => {
+                    return <Item  key={product.id} product = {product} />
+                    })}
+            </Container>
+        </>
     )
 }
 
